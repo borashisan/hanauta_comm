@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+body {
+  padding-top: 60px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
