@@ -1,13 +1,17 @@
 @import "bootstrap";
 
 body {
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 h1 {
   text-align: center;
 }
 
+/* form */
+.form-control {
+  margin-bottom: 10px;
+}
 
 
 /* mixins, variables, etc. */
