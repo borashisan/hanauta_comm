@@ -13,6 +13,21 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+
+.user-list {
+  text-decoration: none;
+}
+
 
 /* mixins, variables, etc. */
 
