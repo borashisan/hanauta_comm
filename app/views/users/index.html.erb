@@ -2,8 +2,6 @@
 
 <%= paginate @users %>
 <ul class="users">
-  <% @users.each do |user| %>
-    <li><i class="fas fa-user fa-2x"></i><%= link_to user.name, user, class: 'user-list' %></li>
-  <% end %>
+    <%= render @users %> 
 </ul>
 <%= paginate @users %>
