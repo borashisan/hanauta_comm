@@ -1,4 +1,8 @@
 <li>
   <i class="fas fa-user-circle fa-2x"></i>
   <%= link_to user.name, user, class: 'user-list' %>
+  <% if current_user.admin? && !current_user?(user) %>
+    |<%= link_to "削除", user, method: :delete,
+                              data: { confirm: "You sure?" } %>
+  <% end %>
 </li>
