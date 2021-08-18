@@ -1,7 +1,9 @@
 <h1 class="mb-3">All users</h1>
 
+<%= paginate @users %>
 <ul class="users">
   <% @users.each do |user| %>
     <li><%= link_to user.name, user, class: 'user-list' %></li>
   <% end %>
 </ul>
+<%= paginate @users %>

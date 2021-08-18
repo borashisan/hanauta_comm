@@ -7,6 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.3'
 gem 'bcrypt', '3.1.13'
 gem 'faker',                   '2.1.2'
+gem 'kaminari'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
