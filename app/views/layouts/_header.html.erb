@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">ホーム</a>
         </li>
         <li class="nav-item">
           <%= link_to "ユーザー一覧", users_path, class: 'nav-link' %>
@@ -15,10 +15,10 @@
         <% if logged_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+              ユーザー
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to "プロフィール", current_user, method: :delete, class:'dropdown-item' %>
+              <%= link_to "プロフィール", current_user, class:'dropdown-item' %>
               <li><%= link_to "編集", edit_user_path(current_user), class: 'dropdown-item' %></li>
               <li><%= link_to "ログアウト", logout_path, method: :delete, class:'dropdown-item' %></li>
             </ul>

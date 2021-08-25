@@ -53,5 +53,4 @@ production:
   <<: *default
   database: hanauta_comm_production
   username: root
-  password: <%= Rails.application.credentials.db[:password] %>
-  host: <%= Rails.application.credentials.db[:hostname] %>
+  password: <%= Rails.application.credentials.password %>
