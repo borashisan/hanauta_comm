@@ -1,12 +1,19 @@
 <div class="row">
+  <aside class="col-md-4">
     <section class="user_info">
       <h1>
-      <%= @user.name %>
+        <i class="fas fa-user-circle fa-2x"></i>
+        <span class="user mt-5 pt-0"><%= @user.name %></span>
       </h1>
-      <% if logged_in? %>
-        <h1>ログイン中</h1>
-      <% else %>
-        <h1>ログイン中ではありません</h1>
-      <% end %>
     </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= paginate @microposts %>
+    <% end %>
+  </div>
 </div>

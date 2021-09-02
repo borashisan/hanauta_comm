@@ -30,13 +30,22 @@ h1 {
   list-style: none;
   margin: 0;
   li {
-    padding: 10px 0;
-    border-bottom: 1px solid #d3d3d3;
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e8e8;
   }
-}
+  .fa-user-circle {
+    float: left;
+  }
+  .user-list {
+    text-decoration: none;
+    margin-left: 10px;
+  }
 
-.user-list {
-  text-decoration: none;
+}
+.user_info {
+  .fa-user-circle {
+    float: left;
+  }
 }
 
 
@@ -58,4 +67,53 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* microposts */
+
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid hsl(0, 0%, 91%); 
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .title {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color:  #696969;
+    display: block;
+    margin-left: 60px;
+  }
+  .fa-user-circle {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    width: 400px;
+    margin-bottom: 5px;
+  }
+}
+
+span.image {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
 }

@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @micropost = current_user.microposts.build if logged_in?
   end
 
   def create

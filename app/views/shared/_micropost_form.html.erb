@@ -1,0 +1,7 @@
+<%= form_with(model: @micropost, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :title, placeholder: "鼻歌に対する説明を入力してみよう" %>
+  </div>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
+<% end %>

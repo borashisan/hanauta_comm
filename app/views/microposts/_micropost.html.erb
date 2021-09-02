@@ -1,0 +1,10 @@
+<li class="micropost-<%= micropost.id %>">
+  <%= link_to micropost.user do %>
+    <i class="fas fa-user-circle fa-2x"></i>
+  <% end %>
+  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+  <span class="title"><%= micropost.title %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+</li>
