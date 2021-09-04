@@ -1,10 +1,4 @@
 @import "bootstrap";
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-//@import '@fortawesome/fontawesome-free/scss/solid';
-//@import '@fortawesome/fontawesome-free/scss/regular';
-//@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/v4-shims';
 
 
 body {
@@ -15,6 +9,14 @@ h1 {
   text-align: center;
 }
 
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
 .pagination {
   justify-content: center;
 }
@@ -22,6 +24,12 @@ h1 {
 /* form */
 .form-control {
   margin-bottom: 10px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 /* Users index */
@@ -106,7 +114,6 @@ $gray-medium-light: #eaeaea;
 aside {
   textarea {
     height: 100px;
-    width: 300px;
     margin-bottom: 5px;
   }
 }
@@ -117,3 +124,6 @@ span.image {
     border: 0;
   }
 }
+
+
+
