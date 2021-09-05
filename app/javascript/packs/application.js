@@ -11,3 +11,4 @@ ActiveStorage.start()
 // 作成したファイルをwebpackerに読み込ませます。
 import "../stylesheets/application"
 import "../js/hoge.js"
+//= require audiojs
