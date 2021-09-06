@@ -3,7 +3,7 @@
     <i class="fas fa-user-circle fa-2x"></i>
   <% end %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <audio src="<%= "#{micropost.file}" %>" controls="">
+  <audio class="player" src="<%= "#{micropost.file}" %>" controls="">
     <a href="<%= "#{micropost.file}" %>">ダウンロード</a>
   </audio>
   <span class="title"><%= micropost.title %></span>

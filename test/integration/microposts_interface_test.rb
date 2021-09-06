@@ -11,21 +11,30 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     get root_path
     assert_template 'sessions/new'
     assert_select 'ul.pagination'
-    #無効な送信
+    #無効な送信(タイトル)
     assert_no_difference 'Micropost.count' do
-      post microposts_path, params: { micropost: { content: "" } }
+      post microposts_path, params: { micropost: { content: "",
+                                                file: ""} }
     end
     assert_select 'div#error_explanation'
     #assert_select 'a[href=?]', '/?page=2'
-    
-    #有効な送信
+    #無効な送信(音声なし)
     title = "80年代の曲だと思います"
+    file = "menuettm.mp3"
+    assert_no_difference 'Micropost.count' do
+      post microposts_path, params: { micropost: { title: title, 
+                                                file: "" } }
+    end
+    #有効な送信
+=begin
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { title: title } }
+      post microposts_path, params: { micropost: { title: title,
+                                                file: file} }
     end
     assert_redirected_to root_url
     follow_redirect!
     assert_match title, response.body
+=end
     #投稿を削除する
     assert_select 'a', text: '削除'
     first_micropost = @user.microposts.page(1).first
