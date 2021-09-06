@@ -7,6 +7,8 @@ class MicropostTest < ActiveSupport::TestCase
                                       file: "menuettm.mp3")
   end
 
+  #拡張子のテスト
+
 =begin
   test "should be valid" do
     assert @micropost.valid?
