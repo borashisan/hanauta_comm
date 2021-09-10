@@ -1,10 +1,15 @@
-<% if logged_in? %>
-  <div class="response_form">
-    <h3>コメントを投稿する</h3>
-    <%= render partial: 'shared/response_form', locals: { response: @response, micropost: @micropost } %>
-  </div>
+<a class="response-count">レス数<%= responses.count %>件</a>
+<% responses.each do |response| %>
+  <% unless response.id.nil? %>
+    <div class="response-box">
+      <p><%= response.user.name %> <%= response.created_at %></p>
+      <%= simple_format(h response.content) %>
+      <% if response.user == current_user %>
+        <%= link_to micropost_response_path(response.micropost_id, response.id), 
+                method: :delete, data: { confirm: "本当によろしいですか？" } do %>
+          <i class="fas fa-trash" style="color: black;"></i>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
-<h2>コメント一覧</h2>
-<div class="response_area">
-  <%= render partial: 'shared/response_index', locals: { responses: @responses } %>
-</div>

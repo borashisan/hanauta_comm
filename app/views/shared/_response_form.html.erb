@@ -1,4 +1,5 @@
-<%= form_with(model: [micropost, response], url: micropost_responses_path(@micropost) ) do |f| %>
+<%= form_with(model: [micropost, response], url: micropost_responses_path(@micropost), local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
     <%= f.text_area :content, size: "10x5", class:"area-field" %>
     <%= f.submit "書き込む", class:"submit-btn" %>
 <% end %>
