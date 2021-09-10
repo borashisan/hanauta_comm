@@ -4,6 +4,8 @@ class MicropostsController < ApplicationController
 
   def show
     @micropost = Micropost.find(params[:id])
+    @response = Response.new
+    @responses = @micropost.responses.order(created_at: :desc)
   end
 
   def create

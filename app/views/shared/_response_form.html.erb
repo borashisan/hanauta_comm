@@ -1,0 +1,4 @@
+<%= form_with(model: [micropost, response], url: micropost_responses_path(@micropost) ) do |f| %>
+    <%= f.text_area :content, size: "10x5", class:"area-field" %>
+    <%= f.submit "書き込む", class:"submit-btn" %>
+<% end %>
