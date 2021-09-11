@@ -1,13 +1,16 @@
 <div class="micropost">
   <%= render @micropost %>
 </div>
-<% if logged_in? %>
-  <div class="response_form">
-    <h3>コメントを投稿する</h3>
-    <%= render partial: 'shared/response_form', locals: { response: @response, micropost: @micropost } %>
+<div class="response">
+  <h2>コメント一覧</h2>
+  <div class="response_area">
+    <%= render partial: 'shared/response_index', locals: { responses: @responses } %>
   </div>
-<% end %>
-<h2>コメント一覧</h2>
-<div class="response_area">
-  <%= render partial: 'shared/response_index', locals: { responses: @responses } %>
+  <% if logged_in? %>
+    <div class="response_form">
+      <h3>コメントを投稿する</h3>
+      <%= render partial: 'shared/response_form', locals: { response: @response, micropost: @micropost } %>
+    </div>
+  <% end %>
 </div>
+

@@ -21,12 +21,12 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     #無効な送信(音声なし)
     title = "80年代の曲だと思います"
     file = "menuettm.mp3"
+=begin
     assert_no_difference 'Micropost.count' do
       post microposts_path, params: { micropost: { title: title, 
                                                 file: "" } }
     end
     #有効な送信
-=begin
     assert_difference 'Micropost.count', 1 do
       post microposts_path, params: { micropost: { title: title,
                                                 file: file} }

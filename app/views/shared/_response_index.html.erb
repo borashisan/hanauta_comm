@@ -2,7 +2,7 @@
 <% responses.each do |response| %>
   <% unless response.id.nil? %>
     <div class="response-box">
-      <p><%= response.user.name %> <%= response.created_at %></p>
+      <p><%= response.response_id %>.<%= response.user.name %> <%= response.created_at %></p>
       <%= simple_format(h response.content) %>
       <% if response.user == current_user %>
         <%= link_to micropost_response_path(response.micropost_id, response.id), 

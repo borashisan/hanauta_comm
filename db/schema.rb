@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_10_042516) do
+ActiveRecord::Schema.define(version: 2021_09_11_055030) do
 
   create_table "microposts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_09_10_042516) do
     t.bigint "micropost_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "response_id"
     t.index ["micropost_id"], name: "index_responses_on_micropost_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
