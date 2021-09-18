@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to the Hanauta Comm"
-      redirect_to @user #= redfirect_to user_url(@user)
+      redirect_to root_path #= redfirect_to user_url(@user)
     else
       render 'new'
     end
