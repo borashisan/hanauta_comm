@@ -20,5 +20,7 @@ end
 users = User.order(:created_at).take(6)
 50.times do
   title = Faker::Lorem.sentence(word_count: 5)
-  users.each { |user| user.microposts.create!(title: title) }
+  file = File.open('./app/assets/images/Kokage_De_Yuttari-1(Slow).mp3')
+  users.each { |user| user.microposts.create!(title: title,
+                                              file: file) }
 end
