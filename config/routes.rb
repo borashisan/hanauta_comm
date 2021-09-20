@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :microposts,  only: [:show, :create, :destroy] do
     resources :responses, only: [:create, :destroy]
   end
+  resources :account_activations, only: [:edit]
 end
