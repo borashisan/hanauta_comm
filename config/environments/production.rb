@@ -66,7 +66,7 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
       :address =>        "email-smtp.ap-northeast-1.amazonaws.com",
       :port =>           587,
-      :domain =>         "hanauta-comm.net"
+      :domain =>         "hanauta-comm.net",
       :authentication => :login,
       :user_name =>      Rails.application.credentials.AWS_SMTP_ACCESS_KEY_ID,
       :password =>       Rails.application.credentials.AMS_SMTP_SECRET_ACCESS_KEY
