@@ -62,7 +62,7 @@ Rails.application.configure do
 
   
   config.action_mailer.perform_caching = true
-
+  config.action_mailer.default_url_options = { host: 'http://hanauta-comm.net'}
   config.action_mailer.delivery_method = :ses
 
 
