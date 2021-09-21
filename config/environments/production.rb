@@ -60,7 +60,17 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "HANAUTA_COMM_production"
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = { host: "hanauta-comm.net" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_caching = true
+  ActionMailer::Base.smtp_settings = {
+      :address =>        "email-smtp.ap-northeast-1.amazonaws.com",
+      :port =>           587,
+      :domain =>         "hanauta-comm.net"
+      :authentication => :login,
+      :user_name =>      Rails.application.credentials.AWS_SMTP_ACCESS_KEY_ID,
+      :password =>       Rails.application.credentials.AMS_SMTP_SECRET_ACCESS_KEY
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
