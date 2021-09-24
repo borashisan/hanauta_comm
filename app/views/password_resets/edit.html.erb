@@ -1,7 +1,7 @@
 <% provide(:title, 'パスワード再設定') %>
 <h1>パスワード再設定</h1>
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-4 offset-md-4 text-center">
     <%= form_with(model: @user, url: password_reset_path(params[:id]),
           local: true) do |f| %>
       <%= render 'shared/error_messages',  object: f.object %>
