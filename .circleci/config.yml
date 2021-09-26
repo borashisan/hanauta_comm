@@ -88,7 +88,7 @@ jobs:
       
       - add_ssh_keys:
           fingerprints:
-            - "a2:b2:0f:bd:20:71:91:49:f4:d7:6a:61:70:db:9a:4f"
+            - "da:81:75:bd:7a:e9:85:2b:f3:4b:15:30:a6:91:d2:a5"
 
       # capistrano実行コマンドを追記
       - deploy:
