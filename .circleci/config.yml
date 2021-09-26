@@ -2,7 +2,7 @@ version: 2.1 # バージョン指定
 
 executors:  
   default:  
-    working_directory: ~/webapp  
+    working_directory: ~/hanauta_comm
     docker:  
       - image: circleci/ruby:2.6.5-node
         environment:  
