@@ -84,6 +84,16 @@ jobs:
           command: |  
             bin/rails test  
             bin/rails test:system  
+      
+      - add_ssh_keys:
+          fingerprints:
+            - "a2:b2:0f:bd:20:71:91:49:f4:d7:6a:61:70:db:9a:4f"
+
+      # capistrano実行コマンドを追記
+      - deploy:
+          name: Capistrano deploy
+          command:
+            bundle exec cap production deploy
 
 workflows:  
   build_and_test:  
