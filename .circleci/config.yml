@@ -93,7 +93,10 @@ jobs:
       # capistrano実行コマンドを追記
       - deploy:
           name: Capistrano deploy
-          command:
+          command: |
+            if [ "${CIRCLE_BRANCH}" != "master" ]; then
+              exit 0
+            fi
             bundle exec cap production deploy
 
 workflows:  
