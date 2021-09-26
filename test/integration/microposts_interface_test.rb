@@ -9,7 +9,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   test "micropost interface" do
     log_in_as(@user)
     get root_path
-    assert_template 'sessions/new'
+    assert_template 'sessions'
     assert_select 'ul.pagination'
     #無効な送信(タイトル)
     assert_no_difference 'Micropost.count' do
