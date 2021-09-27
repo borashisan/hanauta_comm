@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       if user.activated?
         log_in user
-        redirect_back_or user
+        redirect_back_or root_path
       else
         message = "アカウントが有効化されていません"
         message += "メールを確認してアカウントを有効化してください"

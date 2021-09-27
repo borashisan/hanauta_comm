@@ -3,6 +3,7 @@
 
 body {
   padding-top: 120px;
+  background-color: #f9f9f9;
 }
 
 h1 {
@@ -19,6 +20,11 @@ textarea {
 
 .pagination {
   justify-content: center;
+}
+
+/* header */
+header {
+  background-color: #24292e;
 }
 
 /* form */
@@ -135,6 +141,13 @@ $gray-medium-light: #eaeaea;
     float: left;
     margin-right: 10px;
     margin-top: 5px;
+  }
+}
+
+/* Response */
+.response {
+  textarea, input {
+    width: 50%;
   }
 }
 
