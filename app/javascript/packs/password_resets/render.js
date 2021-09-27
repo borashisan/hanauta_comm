@@ -1,1 +1,1 @@
-history.replaceState('', '', 'password_resets/new')
+history.replaceState('', '', '/password_resets/new')
