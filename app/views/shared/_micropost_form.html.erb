@@ -9,3 +9,6 @@
   </span>
   <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
+<% if @micropost.errors.any? %>
+  <%= javascript_pack_tag 'root_path/render' %>
+<% end %>

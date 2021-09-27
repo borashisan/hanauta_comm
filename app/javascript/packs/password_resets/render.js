@@ -1,0 +1,1 @@
+history.replaceState('', '', 'password_resets/new')

@@ -12,3 +12,6 @@ ActiveStorage.start()
 import "../stylesheets/application"
 import "../js/hoge.js"
 //= require audiojs
+require("root_path/render")
+require("signup/render")
+require("password_resets/render")
