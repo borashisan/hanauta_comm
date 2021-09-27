@@ -62,7 +62,7 @@
 server "13.112.127.33", user: "borashisan", roles: %w{app db web}
 
 set :ssh_options, {
-  keys: %w(~/.ssh/hanauta_comm.cer),
+  keys: %w(~/.ssh/hanauta_comm_rsa),
   forward_agent: true,
   auth_methods: %w(publickey),
 }
