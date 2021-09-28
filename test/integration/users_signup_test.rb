@@ -44,8 +44,4 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     assert is_logged_in?
   end
-
-  
-
-  
 end
